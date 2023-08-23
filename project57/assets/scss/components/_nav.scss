@@ -1,0 +1,55 @@
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__menu {
+        @media screen and (max-width: 768px) {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            height: 100%;
+            padding: 3.5rem 1.5rem 0;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: .5s;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: .75rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__item {
+        margin-bottom: 2rem;
+    }
+
+    &__close,
+    &__link,
+    &__logo,
+    &__toggle {
+        color: var(--white-color);
+    }
+
+    &__link {
+        &:hover {
+            color: var(--first-color-dark);
+        }
+    }
+
+    &__toggle {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+.show {
+    right: 0;
+}
